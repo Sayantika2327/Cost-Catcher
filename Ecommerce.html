@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Upload & Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        /* Background */
+        body {
+            background: url('Background3.jpeg') no-repeat center center fixed; /* Replace with your image path */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Centering Container */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            background: rgba(255, 255, 255, 0.8); /* Light overlay for readability */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        /* Upload & Search Sections */
+        .upload-section, .search-section {
+            text-align: center;
+            width: 45%;
+        }
+        
+        /* Input Fields */
+        .input-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .input-box {
+            flex: 1;
+            padding: 12px;
+            font-size: 1.2em;
+            border: 2px solid black;
+            border-radius: 5px;
+            background: white;
+        }
+        
+        /* Upload Button Inside Input */
+        .upload-btn {
+            padding: 12px 20px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            background: #a188c8; /* Light Purple */
+            color: black;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        
+        /* Search Button */
+        .search-btn {
+            padding: 12px 20px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            background: #4b67a1; /* Blue */
+            color: white;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .upload-btn:hover, .search-btn:hover {
+            opacity: 0.8;
+        }
+        </style>
+        
+    <header>
+        <h2 class="logo">Cost-Catcher</h2>
+        <nav class="navigation">
+            <a href="javascript:history.back()">Home</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <div class="input-container">
+                <input type="text" placeholder="Upload your Product....." class="input-box">
+                <button class="upload-btn" onclick="document.getElementById('imageUpload').click()">Upload</button>
+            </div>
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+            <button class="search-btn">Search</button>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <input type="text" placeholder="Search For Product...." class="input-box">
+            <button class="search-btn">Search</button>
+        </section>
+    </div>
+
+    <script src="ecommerce.js"></script>
+
+</body>
+</html> 

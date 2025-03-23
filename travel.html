@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Options</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .category-btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            border-radius: 8px;
+        }
+        .cab {
+            background-color: #ff5733;
+            color: white;
+        }
+        .tickets {
+            background-color: #33c1ff;
+            color: white;
+            position: relative;
+        }
+        .category-btn:hover {
+            transform: scale(1.1);
+            background-color: #ffcc00;
+            color: black;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Cost-Catcher</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+    
+    <section class="travel-options" style="display: flex; justify-content: center; gap: 50px; margin-top: 50px;">
+        <button class="category-btn cab" onclick="window.location.href='cab.html'">Cab</button>
+        <div class="tickets-container" style="position: relative;">
+            <button class="category-btn tickets" onclick="toggleDropdown()">Tickets</button>
+            <div class="dropdown" id="dropdownMenu">
+                <a href="flights.html">Flights</a>
+                <a href="trains.html">Trains</a>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdownMenu");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
