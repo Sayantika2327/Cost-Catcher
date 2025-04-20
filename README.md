@@ -24,7 +24,7 @@
 
 | Frontend     | Backend        | Web Scraping | Others             |
 |--------------|----------------|--------------|--------------------|
-| HTML, CSS, JS| PHP            | Python (Selenium) | Excel, VS Code, Git |
+| HTML, CSS, JS| FLASK          | Python (Selenium) | Excel, VS Code, Git |
 
 ---
 
