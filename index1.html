@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Food Price Comparison</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hunger Ranch - Swiggy vs Zomato</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Food Name</th>
+                <th>Swiggy Price</th>
+                <th>Zomato Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item['Food Name'] }}</td>
+                <td class="{{ 'cheaper' if item['Swiggy Price'] < item['Zomato Price'] else '' }}">
+                    ₹{{ item['Swiggy Price'] }}
+                </td>
+                <td class="{{ 'cheaper' if item['Zomato Price'] < item['Swiggy Price'] else '' }}">
+                    ₹{{ item['Zomato Price'] }}
+                </td>
+            </tr>
+            {% endfor %}
+            <!-- Visit Now Row -->
+            <tr>
+                <td><strong>Links</strong></td>
+                <td>
+                    <a href="https://www.swiggy.com/city/noida-1/hunger-ranch-greater-noida-rest1059526" target="_blank" class="visit-link">Visit Now</a>
+                </td>
+                <td>
+                    <a href="https://www.zomato.com/ncr/hunger-ranch-alpha-2-greater-noida/order" target="_blank" class="visit-link">Visit Now</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,20 +1,17 @@
-const wrapper=document.querySelector('.wrapper');
-const loginLink=document.querySelector('.login-link');
-const registerLink=document.querySelector('.register-link');
-const btnPopup=document.querySelector('.btnLogin-popup');
-const iconClose=document.querySelector('.icon-close');
+// Script to switch between login and register forms
+const wrapper = document.querySelector(".wrapper");
+const loginLink = document.querySelector(".login-link");
+const registerLink = document.querySelector(".register-link");
 
-registerLink.addEventListener("click",()=>{
-    wrapper.classList.add('active');
-});
-loginLink.addEventListener('click',()=>{
-    wrapper.classList.remove('active');
+registerLink.addEventListener("click", () => {
+  wrapper.classList.add("active");
 });
 
-btnPopup.addEventListener('click',()=>{
-    wrapper.classList.add('active-popup');
+loginLink.addEventListener("click", () => {
+  wrapper.classList.remove("active");
 });
 
-iconClose.addEventListener('click',()=>{
-    wrapper.classList.remove('active-popup');
-});
+// Optional: Close button (if added)
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
